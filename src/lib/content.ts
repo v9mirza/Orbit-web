@@ -1,8 +1,7 @@
 export const tagline = "A free and open source personal workspace for everything that matters.";
 export const sourceRepository = "https://github.com/v9mirza/Orbit-app";
 export const androidDownload = {
-  href: "https://github.com/v9mirza/Orbit-app/releases/tag/v1.0.0",
-  filename: "orbit-v1.0.0.apk",
+  href: "https://9djppbefot0av9vy.public.blob.vercel-storage.com/orbit-v1.0.0.apk",
   label: "Download for Android",
 } as const;
 
