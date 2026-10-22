@@ -49,6 +49,8 @@
 .hero-actions .button { min-width: 215px; min-height: 60px; }
 .hero-source-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 23px; color: var(--forest); font-size: 12px; font-weight: 750; text-decoration: underline; text-decoration-color: #9ab79c; text-underline-offset: 5px; }
 .hero-source-link:hover { color: var(--green); }
+.hero-download-note { margin: 14px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.hero-download-note strong, .closing-download-note strong { color: var(--forest); font-weight: 800; }
 .hero-visual { width: 100%; height: 600px; margin: 35px 0 0; border-radius: 48% 48% 30px 30px; background: #dfeadd; display: flex; align-items: flex-end; justify-content: center; overflow: visible; isolation: isolate; }
 .hero-orbit { z-index: -1; width: 95%; height: auto; aspect-ratio: 1; top: 4%; right: -12%; border: 1px solid rgba(56, 107, 82, .22); background: transparent; border-radius: 50%; }
 .hero-orbit:before { inset: 12%; border-color: rgba(56, 107, 82, .15); }
@@ -159,6 +161,7 @@
 .closing-cta { padding-block: 80px; background: #dcebd8; }
 .closing-inner { min-height: 300px; }
 .closing-cta h2 { font-size: clamp(56px, 5.8vw, 83px); }
+.closing-download-note { margin: 14px 0 0; color: #536b58; font-size: 12px; }
 
 /* Inner pages inherit the same measured spacing and product framing. */
 .inner-hero { padding: clamp(100px, 10vw, 150px) 0 clamp(105px, 10vw, 150px); }

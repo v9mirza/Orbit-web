@@ -13,7 +13,7 @@ const faqs = [
   { question: "Can I track expenses and budgets?", answer: "Yes. Orbit shows expenses, monthly spending, and budget information in its Expenses area." },
   { question: "Can I organize tasks and habits?", answer: "Yes. Orbit has separate To-dos and Habits areas for keeping track of everyday responsibilities and routines." },
   { question: "Can I keep notes in Orbit?", answer: "Yes. Orbit has a Notes area for capturing and finding information you want to revisit." },
-  { question: "Is Orbit available on Android and iOS?", answer: "Orbit is available as a direct Android APK download from this website. iOS availability has not been announced." },
+  { question: "Is Orbit available on Android and iOS?", answer: "Orbit is available as an Android APK from the GitHub release linked on this website. Under Assets, tap orbit-v1.0.0.apk. iOS availability has not been announced." },
   { question: "Does Orbit work offline?", answer: "Offline functionality has not yet been announced." },
   { question: "How does Orbit handle personal data?", answer: <>Orbit stores your records locally on your device. It does not require an account or offer cloud sync. Read the <Link href="/privacy">Privacy Policy</Link> for backup and deletion details.</> },
 ];
