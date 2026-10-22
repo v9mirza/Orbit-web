@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Check, NotebookPen, Repeat2, Wallet, ListTodo } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, CodeXml, Download, NotebookPen, Repeat2, Wallet, ListTodo } from "lucide-react";
 import { AppShot } from "@/components/app-shot";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/reveal";
 import { SectionCta } from "@/components/section-cta";
-import { screens, tagline } from "@/lib/content";
+import { androidDownload, screens, sourceRepository } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Orbit — A Personal Workspace for Everything That Matters", description: "Bring tasks, habits, notes, and expenses together in Orbit, a personal workspace designed to make everyday life clearer and easier to organize." };
+export const metadata: Metadata = { title: "Orbit — Free and Open Source Personal Workspace", description: "Orbit is a free, open source Android app for tasks, habits, notes, and expenses. Download the app and explore its MIT-licensed code on GitHub." };
 
 const cards = [
   { icon: ListTodo, number: "01", title: "Make a plan", text: "Give tasks a clear place and make the next step easier to find." },
@@ -19,20 +19,21 @@ const cards = [
 export default function Home() {
   return <>
     <section className="hero"><div className="container hero-grid">
-      <div className="hero-copy"><Reveal><span className="eyebrow">A PERSONAL WORKSPACE</span><h1>Make space for<br /><em>everything that<br />matters.</em></h1></Reveal><Reveal delay={0.1}><p className="lead">Your tasks, habits, notes, and expenses. One calm place to bring everyday life together.</p><div className="hero-actions"><Link className="button button-dark" href="/experience">Explore Orbit <ArrowUpRight size={18} /></Link><Link className="text-link" href="/experience">Discover the experience <ArrowRight size={17} /></Link></div><p className="hero-tagline">{tagline}</p></Reveal></div>
+      <div className="hero-copy"><Reveal><span className="eyebrow">FREE &amp; OPEN SOURCE / A PERSONAL WORKSPACE</span><h1>Make space for<br /><em>everything that<br />matters.</em></h1></Reveal><Reveal delay={0.1}><p className="lead">Your tasks, habits, notes, and expenses. One calm place to bring everyday life together, free and open source.</p><div className="hero-actions"><a className="button button-dark" href={androidDownload.href}>{androidDownload.label} <Download size={18} /></a><Link className="text-link" href="/experience">Discover the experience <ArrowRight size={17} /></Link></div><a className="hero-source-link" href={sourceRepository}><CodeXml size={16} /> View the source on GitHub <ArrowUpRight size={15} /></a></Reveal></div>
       <Reveal className="hero-visual" delay={0.15}>
         <div className="hero-orbit" aria-hidden="true" />
+        <span className="hero-visual-eyebrow">ORBIT / YOUR DAILY OVERVIEW</span>
         <div className="hero-phone"><AppShot screen={screens[0]} priority /></div>
-        <div className="hero-note"><span className="note-icon"><Check size={16} /></span><span>Make room for what matters.</span></div>
-        <span className="hero-visual-caption">A CONSIDERED VIEW OF YOUR DAY / 01</span>
       </Reveal>
     </div><div className="container hero-bottom"><span>THE EVERYDAY, TOGETHER</span><nav className="orbit-map" aria-label="Explore Orbit's core areas"><Link href="/features#to-dos">TASKS</Link><Link href="/features#habits">HABITS</Link><Link href="/features#notes">NOTES</Link><Link href="/features#expenses">EXPENSES</Link></nav><ArrowDownRight size={18} aria-hidden="true" /></div></section>
 
     <section className="intro section"><div className="container intro-grid"><Reveal><span className="eyebrow">A LITTLE MORE ROOM TO THINK</span><h2>Less noise.<br /><em>More clarity.</em></h2></Reveal><Reveal delay={0.1}><p>Everyday life has enough moving parts. Orbit gives your tasks, habits, notes, and expenses a considered place, so you can focus on what deserves your attention.</p><span className="intro-rule" /></Reveal></div></section>
 
-    <section className="showcase section"><div className="container"><Reveal className="section-heading"><span className="eyebrow">THE ORBIT EXPERIENCE</span><div className="section-heading-grid"><h2>A clearer view of<br /><em>everyday life.</em></h2><p>Four connected tools. One place to see the bigger picture.</p></div></Reveal><div className="showcase-grid">{screens.map((screen, i) => <Reveal className={`showcase-card showcase-card-${i + 1}`} key={screen.id} delay={i % 3 * 0.06}><div className="showcase-image"><span className="showcase-card-label">{String(i + 1).padStart(2, "0")} / {screen.label.toUpperCase()}</span><AppShot screen={screen} /></div><div className="showcase-card-copy">{i === 0 && <span className="showcase-feature-kicker">YOUR DAY, ALL TOGETHER</span>}<h3>{screen.title}</h3><p>{screen.description}</p></div></Reveal>)}</div><Link className="text-link showcase-more" href="/features">Explore all features <ArrowUpRight size={18} /></Link></div></section>
+    <section className="open-source-section" aria-labelledby="open-source-title"><div className="container open-source-grid"><Reveal><span className="eyebrow">OPEN BY DESIGN</span><h2 id="open-source-title">Your workspace.<br /><em>Open to everyone.</em></h2></Reveal><Reveal delay={0.1} className="open-source-copy"><p>Orbit is free to download and use. Its source code is public under the MIT license, so you can see how the app is built and follow its development.</p><a className="text-link" href={sourceRepository}>Explore the code on GitHub <ArrowUpRight size={18} /></a></Reveal></div></section>
 
-    <section className="benefits section"><div className="container"><Reveal className="benefits-heading"><span className="eyebrow">THE ESSENTIALS</span><h2>Everything you need.<br /><em>Nothing in the way.</em></h2></Reveal><div className="benefit-grid">{cards.map(card => <Reveal className="benefit-card" key={card.title}><div className="benefit-top"><card.icon size={24} strokeWidth={1.5} /><span>{card.number}</span></div><div><h3>{card.title}</h3><p>{card.text}</p></div></Reveal>)}</div></div></section>
+    <section className="showcase section"><div className="container"><Reveal className="section-heading"><span className="eyebrow">THE ORBIT EXPERIENCE</span><div className="section-heading-grid"><h2>A clearer view of<br /><em>everyday life.</em></h2><p>Four connected tools. One place to see the bigger picture.</p></div></Reveal><div className="showcase-grid">{screens.map((screen, i) => <Reveal className={`showcase-card showcase-card-${i + 1}`} key={screen.id} delay={i % 3 * 0.06} hoverLift><div className="showcase-image"><span className="showcase-card-label">{String(i + 1).padStart(2, "0")} / {screen.label.toUpperCase()}</span><AppShot screen={screen} /></div><div className="showcase-card-copy">{i === 0 && <span className="showcase-feature-kicker">YOUR DAY, ALL TOGETHER</span>}<h3>{screen.title}</h3><p>{screen.description}</p><Link className="showcase-card-link" href={screen.id === "overview" ? "/experience" : `/features#${screen.id}`}>Explore {screen.label} <ArrowUpRight size={15} /></Link></div></Reveal>)}</div><Link className="text-link showcase-more" href="/features">Explore all features <ArrowUpRight size={18} /></Link></div></section>
+
+    <section className="benefits section"><div className="container"><Reveal className="benefits-heading"><span className="eyebrow">THE ESSENTIALS</span><h2>Everything you need.<br /><em>Nothing in the way.</em></h2></Reveal><div className="benefit-grid">{cards.map((card, index) => <Reveal className="benefit-card" key={card.title} delay={index * 0.06} hoverLift><div className="benefit-top"><card.icon size={24} strokeWidth={1.5} /><span>{card.number}</span></div><div><h3>{card.title}</h3><p>{card.text}</p></div></Reveal>)}</div></div></section>
 
     <section id="one-workspace" className="dark-statement"><div className="container dark-grid">
       <Reveal className="dark-copy">

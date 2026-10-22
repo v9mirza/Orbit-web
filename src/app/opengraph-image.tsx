@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
       <div style={{ display: "flex", flexDirection: "column", gap: 36 }}>
         <div style={{ display: "flex", fontSize: 42, fontWeight: 700, letterSpacing: -3 }}>orbit<span style={{ color: "#b8d0b4" }}>.</span></div>
         <div style={{ fontSize: 69, lineHeight: 1.08, fontWeight: 600, letterSpacing: -3, maxWidth: 800 }}>A personal workspace for everything that matters.</div>
-        <div style={{ fontSize: 22, color: "#b8d0b4" }}>Tasks · Habits · Notes · Expenses</div>
+        <div style={{ fontSize: 22, color: "#b8d0b4" }}>Free and open source · Tasks · Habits · Notes · Expenses</div>
       </div>
     </div>,
     size,

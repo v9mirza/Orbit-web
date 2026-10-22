@@ -11,10 +11,10 @@ const instrument = Instrument_Serif({ subsets: ["latin"], weight: "400", style: 
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")),
-  title: { default: "Orbit — A Personal Workspace for Everything That Matters", template: "%s | Orbit" },
-  description: "Bring tasks, habits, notes, and expenses together in Orbit, a personal workspace designed to make everyday life clearer and easier to organize.",
-  openGraph: { title: "Orbit — A Personal Workspace for Everything That Matters", description: tagline, type: "website", siteName: "Orbit" },
-  twitter: { card: "summary_large_image", title: "Orbit", description: tagline },
+  title: { default: "Orbit — Free and Open Source Personal Workspace", template: "%s | Orbit" },
+  description: "Orbit is a free, open source Android app for tasks, habits, notes, and expenses.",
+  openGraph: { title: "Orbit — Free and Open Source Personal Workspace", description: tagline, type: "website", siteName: "Orbit" },
+  twitter: { card: "summary_large_image", title: "Orbit", description: "A free and open source personal workspace." },
   robots: { index: true, follow: true },
 };
 

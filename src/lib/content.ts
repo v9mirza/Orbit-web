@@ -1,4 +1,9 @@
-export const tagline = "A personal workspace for everything that matters.";
+export const tagline = "A free and open source personal workspace for everything that matters.";
+export const sourceRepository = "https://github.com/v9mirza/Orbit-app";
+export const androidDownload = {
+  href: "https://github.com/v9mirza/Orbit-app/releases/download/v1.0.0/orbit-v1.0.0.apk",
+  label: "Download for Android",
+} as const;
 
 export const screens = [
   { id: "overview", label: "Overview", image: "/Images/overview.png", width: 751, height: 1600, title: "Your day, in perspective.", description: "See tasks, habits, and spending together in one considered daily overview." },
