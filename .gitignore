@@ -6,3 +6,4 @@ out/
 *.tsbuildinfo
 .chrome-qa/
 dark-desktop.png
+*.apk
