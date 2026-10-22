@@ -53,12 +53,12 @@ export function Header() {
       <nav className="desktop-nav" aria-label="Main navigation">
         {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined}>{link.label}</Link>)}
       </nav>
-      <a className="button button-dark header-cta" href={androidDownload.href} aria-label="Open the Orbit GitHub release to download the Android APK">{androidDownload.label} <Download size={17} /></a>
+      <a className="button button-dark header-cta" href={androidDownload.href} target="_blank" rel="noopener noreferrer" aria-label="Open the Orbit GitHub release to download the Android APK in a new tab">{androidDownload.label} <Download size={17} /></a>
       <button className="menu-toggle" type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
     </div>
     <nav id="mobile-navigation" className={`mobile-nav ${open ? "is-open" : ""}`} aria-label="Mobile navigation" inert={!open}>
       {links.map(link => <Link key={link.href} href={link.href} aria-current={pathname === link.href ? "page" : undefined} onClick={() => setOpen(false)}>{link.label}<ArrowUpRight size={16} /></Link>)}
-      <a className="button button-dark" href={androidDownload.href} aria-label="Open the Orbit GitHub release to download the Android APK" onClick={() => setOpen(false)}>{androidDownload.label} <Download size={17} /></a>
+      <a className="button button-dark" href={androidDownload.href} target="_blank" rel="noopener noreferrer" aria-label="Open the Orbit GitHub release to download the Android APK in a new tab" onClick={() => setOpen(false)}>{androidDownload.label} <Download size={17} /></a>
     </nav>
     <span ref={progressRef} className="scroll-progress" aria-hidden="true" />
   </header>;
